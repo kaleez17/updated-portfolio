@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white overflow-x-hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.purple-glow-bg {
+  background: radial-gradient(circle at center, rgba(168, 85, 247, 0.1) 0%, rgba(5, 5, 5, 1) 80%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+html {
+  scroll-behavior: smooth;
+}
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+html {
+  scroll-behavior: smooth;
+  /* Adjust 100px based on your navbar height */
+  scroll-padding-top: 100px; 
+}
+/* Add this to src/index.css */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* This specifically fixes the mobile issue where browser bars push things */
+:target::before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+}
