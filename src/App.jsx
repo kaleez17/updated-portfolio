@@ -8,7 +8,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Archive from './components/Archive';
 import Projects from './components/projects';
-import Contact from './components/Contact';
+import Contact from './components/contact';
 
 function MilkyWay() {
   const ref = useRef();
