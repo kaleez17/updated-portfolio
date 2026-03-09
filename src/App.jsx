@@ -7,7 +7,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Archive from './components/Archive';
-import Projects from './components/Projects';
+import Projects from './components/projects';
 import Contact from './components/Contact';
 
 function MilkyWay() {
